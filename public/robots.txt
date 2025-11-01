@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://angeladolores2018-arch.github.io/phiando-hub/sitemap.xml
