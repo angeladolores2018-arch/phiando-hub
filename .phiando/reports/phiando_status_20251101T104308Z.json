@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "20251101T104308Z",
+  "repo": {
+    "remote": "https://github.com/angeladolores2018-arch/phiando-hub.git",
+    "branch": "main",
+    "head": "9055710064c1",
+    "dirty_count": 1
+  },
+  "site": {
+    "url": "https://angeladolores2018-arch.github.io/phiando-hub/",
+    "robots": "https://angeladolores2018-arch.github.io/phiando-hub/robots.txt",
+    "sitemap": "https://angeladolores2018-arch.github.io/phiando-hub/sitemap.xml",
+    "feed": "https://angeladolores2018-arch.github.io/phiando-hub/feed.xml"
+  },
+  "recent_commits": "9055710 Publish harden: SEO/OG/Twitter, rel=me, robots+sitemap, bio
+1a380fe CI: auto-deploy GitHub Pages from /public; sync gh-pages snapshot
+a8b29b5 Phiando HUB initial",
+  "notes": "Non-destructive status snapshot. No checkout, no stash."
+}

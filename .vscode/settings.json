@@ -1,0 +1,29 @@
+{
+  // ---------- Terminal/Shell ----------
+  "terminal.integrated.profiles.osx": {
+    "Zsh (no-rcs)": {
+      "path": "/bin/zsh",
+      "args": ["--no-rcs", "-l"]
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "Zsh (no-rcs)",
+  "terminal.integrated.shellIntegration.enabled": false,
+  "terminal.integrated.environmentChangesIndicator": "off",
+  "terminal.integrated.inheritEnv": true,
+
+  // ---------- Git ----------
+  "git.openRepositoryInParentFolders": "never",
+  "git.autofetch": true,
+
+  // ---------- Python ----------
+  "python.defaultInterpreterPath": "/Users/azomazo/ANGELADOLORES/.venv/bin/python3",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.terminal.activateEnvironment": true,
+
+  // ---------- Files/UI ----------
+  "files.exclude": {
+    "**/.git": true
+  },
+  "workbench.startupEditor": "none"
+}
