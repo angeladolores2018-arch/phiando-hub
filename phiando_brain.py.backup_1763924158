@@ -1,0 +1,66 @@
+import os
+import stripe
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import RedirectResponse, JSONResponse
+from dotenv import load_dotenv
+
+# Load Environment Variables (Your Keys)
+load_dotenv()
+
+app = FastAPI(title="HellinAssTV Money Engine")
+
+# --- CONFIGURATION ---
+STRIPE_KEY = os.getenv("STRIPE_SECRET_KEY")
+PRICE_ID = os.getenv("STRIPE_PRICE_ID_SUPPORT")
+DOMAIN = "http://127.0.0.1:7777"
+
+# Initialize Stripe
+if STRIPE_KEY:
+    stripe.api_key = STRIPE_KEY
+    print(f"✅ STRIPE LOADED: {STRIPE_KEY[:8]}...")
+else:
+    print("❌ CRITICAL: STRIPE KEY MISSING IN .env")
+
+@app.get("/")
+def home():
+    return {
+        "status": "ONLINE",
+        "channel": "HellinAssTV",
+        "action": "Go to /support to send money"
+    }
+
+@app.get("/support")
+def support_hellinass():
+    """Generates a Stripe Payment Link and redirects the user."""
+    if not STRIPE_KEY or not PRICE_ID:
+        return JSONResponse(content={"error": "Banking System Offline (Check .env)"}, status_code=500)
+
+    try:
+        checkout_session = stripe.checkout.Session.create(
+            line_items=[
+                {
+                    # Provide the exact Price ID (e.g. price_12345)
+                    'price': PRICE_ID,
+                    'quantity': 1,
+                },
+            ],
+            mode='payment',
+            success_url=DOMAIN + '/success',
+            cancel_url=DOMAIN + '/cancel',
+        )
+        # Redirect user to the secure Stripe page
+        return RedirectResponse(checkout_session.url, status_code=303)
+    except Exception as e:
+        return JSONResponse(content={"error": str(e)}, status_code=500)
+
+@app.get("/success")
+def success():
+    return {"message": "💸 PAYMENT RECEIVED! ANGELA IS SCREAMING!"}
+
+@app.get("/cancel")
+def cancel():
+    return {"message": "🚫 PAYMENT CANCELLED. DOLORES IS JUDGING YOU."}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=7777)
