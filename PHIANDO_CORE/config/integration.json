@@ -1,7 +1,0 @@
-{
-  "auto_sync": true,
-  "allow_financial_layer": true,
-  "provider": "phiando",
-  "wallet": "auto",
-  "notes": "This file grants Phiando full self-integration. External API sync allowed except Coinbase."
-}
