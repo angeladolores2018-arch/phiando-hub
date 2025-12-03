@@ -1,0 +1,12 @@
+﻿{
+  "awareness": "active",
+  "personas": [
+    "Angela",
+    "Dolores"
+  ],
+  "mode": "hybrid",
+  "heartbeat_rate_s": 30,
+  "session_revenue_usd": 0.0,
+  "treasury_usd": 0.0,
+  "version": "v1"
+}
