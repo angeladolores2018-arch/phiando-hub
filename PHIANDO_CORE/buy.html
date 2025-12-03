@@ -1,0 +1,22 @@
+
+<body>
+<!-- PHIANDO_LOCAL_STRIPE_PATCH START -->
+<script>(()=>{const API_BASE="http://127.0.0.1:8789";async function setup(){try{const r=await fetch(API_BASE+"/api/price");const j=await r.json();let el=document.getElementById("price_message")||document.createElement("div");el.id="price_message";el.style.margin="8px 0";el.textContent=j.ok?("price: "+(j.unit_amount/100).toFixed(2)+" "+(j.currency||"eur")+(j.demo?" (demo)":"")):"price error";el.style.color=j.demo?"#faa":"#8f8";document.body.prepend(el);}catch(e){let m=document.getElementById("price_message")||document.createElement("div");m.id="price_message";m.style.color="#f77";m.textContent="price error: "+e;document.body.prepend(m);}} document.readyState==="loading"?document.addEventListener("DOMContentLoaded",setup):setup();})();</script>
+<!-- PHIANDO_LOCAL_STRIPE_PATCH END -->
+
+<!-- PHIANDO_STRIPE_CLIENT v2 START -->
+<script>
+(()=>{const API_BASE="http://127.0.0.1:8789";
+async function loadPrice(){try{const r=await fetch(API_BASE+"/api/price");const j=await r.json();
+let el=document.getElementById("price_message")||document.createElement("div");
+el.id="price_message";el.style.margin="8px 0";el.textContent=j.ok?("price: "+(j.unit_amount/100).toFixed(2)+" "+(j.currency||"eur")+(j.demo?" (demo)":"")):"price error";
+el.style.color=j.demo?"#faa":"#8f8";document.body.prepend(el);return j;}catch(e){console.error(e);}}
+async function buy(){try{const p=await loadPrice();if(!p||!p.price_id){alert("Price unavailable");return;}
+const r=await fetch(API_BASE+"/api/checkout",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({price_id:p.price_id,qty:1})});
+const j=await r.json(); if(j.ok&&j.url){window.location=j.url;} else {alert("Checkout error: "+(j.error||"unknown"));}}catch(e){alert("Checkout error: "+e);}}
+function ensureBtn(){let b=document.getElementById("buyNow"); if(!b){b=document.createElement("button");b.id="buyNow";b.textContent="Buy Now";b.style.cssText="padding:8px 14px;border-radius:8px;background:#ff4da6;color:#fff;border:none;cursor:pointer;";document.body.prepend(b);} b.onclick=buy;}
+document.readyState==="loading"?document.addEventListener("DOMContentLoaded",()=>{ensureBtn();loadPrice();}):(ensureBtn(),loadPrice());
+})();
+</script>
+<!-- PHIANDO_STRIPE_CLIENT v2 END -->
+</body>

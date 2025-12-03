@@ -1,0 +1,38 @@
+{
+  "CORE": {
+    "path": "/Users/azomazo/ANGELADOLORES/PHIANDO_CORE",
+    "desc": "Core logic, consciousness & heartbeats",
+    "exists": true,
+    "timestamp": "Sat Nov  1 19:10:44 2025"
+  },
+  "UNIVERSE": {
+    "path": "/Users/azomazo/ANGELADOLORES/PHIANDO_UNIVERSE",
+    "desc": "Autonomy, analytics & creative decision modules",
+    "exists": true,
+    "timestamp": "Sat Nov  1 19:10:44 2025"
+  },
+  "STUDIO": {
+    "path": "/Users/azomazo/ANGELADOLORES/studio",
+    "desc": "Local web studio & render environment",
+    "exists": true,
+    "timestamp": "Sat Nov  1 19:10:44 2025"
+  },
+  "NEXUS": {
+    "path": "/Users/azomazo/ANGELADOLORES/phiando-nexus",
+    "desc": "Frontend / Netlify deployment zone",
+    "exists": true,
+    "timestamp": "Sat Nov  1 19:10:44 2025"
+  },
+  "AGENTS": {
+    "path": "/Users/azomazo/ANGELADOLORES/agents",
+    "desc": "Operational AI agents (Runay layer)",
+    "exists": true,
+    "timestamp": "Sat Nov  1 19:10:44 2025"
+  },
+  "QUEENS": {
+    "path": "/Users/azomazo/ANGELADOLORES/queen_agents",
+    "desc": "Performative entities & drag consciousness",
+    "exists": true,
+    "timestamp": "Sat Nov  1 19:10:44 2025"
+  }
+}

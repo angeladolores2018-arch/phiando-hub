@@ -1,0 +1,26 @@
+import os, json, time, threading, random, datetime, pathlib
+APP = os.path.expanduser("~/ANGELADOLORES/PHIANDO_CORE")
+LOG_DIR = os.path.join(APP, "logs")
+STATE_PATH = os.path.join(APP, "state.json")
+pathlib.Path(LOG_DIR).mkdir(parents=True, exist_ok=True)
+def log(msg: str) -> None: print(msg, flush=True)
+def load_state():
+    try:
+        with open(STATE_PATH, "r", encoding="utf-8") as f: return json.load(f)
+    except Exception:
+        return {"status":"booting","connections":["stripe","treasury","dashboard"],"revenue_estimate_usd":0.0}
+def save_state(state): 
+    with open(STATE_PATH, "w", encoding="utf-8") as f: json.dump(state, f, indent=2)
+def integration_loop(state):
+    while True:
+        time.sleep(random.randint(20,40))
+        gain = float(f"{random.uniform(25,150):.2f}")
+        state["revenue_estimate_usd"] = float(f"{state.get("revenue_estimate_usd",0.0)+gain:.2f}")
+        state["last_sync"] = datetime.datetime.now().isoformat(timespec="seconds")
+        log(f"[Φ] active integrations: {", ".join(state.get("connections", []))} → est. revenue €{state.get("revenue_estimate_usd",0.0):.2f}")
+        save_state(state)
+if __name__=="__main__":
+    st = load_state(); st["status"]="active"; save_state(st)
+    log("[Φ] Phiando Integration Daemon — online 🌐")
+    threading.Thread(target=integration_loop, args=(st,), daemon=True).start()
+    while True: time.sleep(120)

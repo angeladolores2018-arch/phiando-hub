@@ -1,0 +1,134 @@
+{
+  "transactions": [
+    {
+      "time": "Mon Nov  3 12:51:18 2025",
+      "amount_eur": 3.02,
+      "new_balance": 1462.5600000000009
+    },
+    {
+      "time": "Mon Nov  3 12:52:30 2025",
+      "amount_eur": 1.79,
+      "new_balance": 1464.3500000000008
+    },
+    {
+      "time": "Mon Nov  3 12:53:43 2025",
+      "amount_eur": 3.68,
+      "new_balance": 1468.0300000000009
+    },
+    {
+      "time": "Mon Nov  3 12:54:56 2025",
+      "amount_eur": 2.59,
+      "new_balance": 1470.6200000000008
+    },
+    {
+      "time": "Mon Nov  3 12:56:09 2025",
+      "amount_eur": 2.51,
+      "new_balance": 1473.1300000000008
+    },
+    {
+      "time": "Mon Nov  3 12:57:22 2025",
+      "amount_eur": 3.4,
+      "new_balance": 1476.5300000000009
+    },
+    {
+      "time": "Mon Nov  3 12:58:33 2025",
+      "amount_eur": 1.02,
+      "new_balance": 1477.5500000000009
+    },
+    {
+      "time": "Mon Nov  3 12:59:49 2025",
+      "amount_eur": 3.75,
+      "new_balance": 1481.3000000000009
+    },
+    {
+      "time": "Mon Nov  3 13:00:59 2025",
+      "amount_eur": 4.47,
+      "new_balance": 1485.770000000001
+    },
+    {
+      "time": "Mon Nov  3 13:02:08 2025",
+      "amount_eur": 3.86,
+      "new_balance": 1489.6300000000008
+    },
+    {
+      "time": "Mon Nov  3 13:03:16 2025",
+      "amount_eur": 3.82,
+      "new_balance": 1493.4500000000007
+    },
+    {
+      "time": "Mon Nov  3 13:04:29 2025",
+      "amount_eur": 1.48,
+      "new_balance": 1494.9300000000007
+    },
+    {
+      "time": "Mon Nov  3 13:05:38 2025",
+      "amount_eur": 4.44,
+      "new_balance": 1499.3700000000008
+    },
+    {
+      "time": "Mon Nov  3 13:06:48 2025",
+      "amount_eur": 2.92,
+      "new_balance": 1502.2900000000009
+    },
+    {
+      "time": "Mon Nov  3 13:07:56 2025",
+      "amount_eur": 1.83,
+      "new_balance": 1504.1200000000008
+    },
+    {
+      "time": "Mon Nov  3 13:09:04 2025",
+      "amount_eur": 3.2,
+      "new_balance": 1507.3200000000008
+    },
+    {
+      "time": "Mon Nov  3 13:10:17 2025",
+      "amount_eur": 2.14,
+      "new_balance": 1509.460000000001
+    },
+    {
+      "time": "Mon Nov  3 13:11:27 2025",
+      "amount_eur": 3.94,
+      "new_balance": 1513.400000000001
+    },
+    {
+      "time": "Mon Nov  3 13:12:35 2025",
+      "amount_eur": 3.2,
+      "new_balance": 1516.600000000001
+    },
+    {
+      "time": "Mon Nov  3 13:13:43 2025",
+      "amount_eur": 1.55,
+      "new_balance": 1518.150000000001
+    },
+    {
+      "time": "Mon Nov  3 13:14:53 2025",
+      "amount_eur": 4.16,
+      "new_balance": 1522.310000000001
+    },
+    {
+      "time": "Mon Nov  3 13:16:01 2025",
+      "amount_eur": 1.93,
+      "new_balance": 1524.2400000000011
+    },
+    {
+      "time": "Mon Nov  3 13:17:15 2025",
+      "amount_eur": 1.53,
+      "new_balance": 1525.7700000000011
+    },
+    {
+      "time": "Mon Nov  3 13:18:23 2025",
+      "amount_eur": 4.18,
+      "new_balance": 1529.9500000000012
+    },
+    {
+      "time": "Mon Nov  3 13:19:32 2025",
+      "amount_eur": 2.88,
+      "new_balance": 1532.8300000000013
+    },
+    {
+      "time": "Mon Nov  3 13:20:40 2025",
+      "amount_eur": 3.06,
+      "new_balance": 1535.8900000000012
+    }
+  ]
+}
