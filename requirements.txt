@@ -1,0 +1,8 @@
+# PhiANDO CORE - Scientific Genesis Architecture
+# Python Dependencies
+
+# Core dependencies (none yet - pure Python implementation)
+# Future integrations:
+# google-generativeai>=0.3.0  # Gemini API
+# anthropic>=0.7.0            # Claude API
+# openai>=1.0.0               # OpenAI API (if needed)
